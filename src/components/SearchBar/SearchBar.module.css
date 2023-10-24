@@ -1,0 +1,31 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 480px;
+  font-size: 24px;
+  border-radius: 0.75rem;
+  padding: 8px;
+  background-color: #1212120a;
+}
+
+
+.SearchInput {
+  background-color: transparent;
+  outline-color: transparent;
+  outline: none;
+  border: 0;
+  width: 100%;
+  margin-left: 4px;
+}
+
+.Slash {
+  height: 26px;
+  min-width: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: #12121214;
+}

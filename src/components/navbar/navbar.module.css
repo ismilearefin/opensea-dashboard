@@ -1,0 +1,55 @@
+.logo{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0px 4px;
+    font-weight: 800;
+    padding: 10px;
+}
+.navbarBox {
+    display: flex;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+   
+}
+.verticalLine{
+    display: flex;
+    justify-content: center;
+    border-right:1px solid #12121214 ;
+    height: 24px;
+    margin-left: 1.5rem;
+}
+.navbar{
+    width: 100%;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 16px;
+}
+.SearchBarDiv{
+    margin-right: 200px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 12px;
+    border: 0;
+    border-radius: 0.75rem;
+    font-size: 16px;
+}
+.buttonBox{
+    display: flex;
+    align-items: center;
+    gap:0px 12px
+}
