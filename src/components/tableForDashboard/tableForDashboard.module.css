@@ -1,0 +1,29 @@
+.mainTable{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 6px 25px;
+    border-collapse: collapse;
+}
+.tableBody td,
+.tableBody th {
+  padding: 12px;
+  text-align: center;
+}
+
+.itemDiv{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tablerow{
+    border-bottom: 1px solid #1212121f;
+}
+
+.img{
+    border-radius: 0.75rem;
+}
+.tableHead th{
+    padding: 12px;
+    border-bottom: 1px solid #1212121f;
+}

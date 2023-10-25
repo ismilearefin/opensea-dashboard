@@ -4,15 +4,9 @@
 }
 
 .buttonDivFilter{
-  padding: 6px 16px;
+  padding: 6px 25px;
   border-bottom: 1px solid #1212120a;
 }
-.filterToggle{
-  background-color: #1212120a;
-    border: 0;
-    padding: 12px;
-    border-radius: 0.75rem;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
+.tableSection{
+  display: flex;
 }

@@ -1,0 +1,12 @@
+.buttons{
+    background-color: #1212120a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border: 0;
+    padding: 12px;
+    border-radius: 0.75rem;
+    font-size: 16px;
+    cursor: pointer;
+}

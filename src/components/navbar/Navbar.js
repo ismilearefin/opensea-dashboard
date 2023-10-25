@@ -3,6 +3,7 @@ import styles from './navbar.module.css'
 import Link from 'next/link'
 import SearchBar from '../SearchBar/SearchBar'
 import { MdWallet,MdOutlineAccountCircle,MdOutlineShoppingCart } from "react-icons/md";
+import CustomButton from '../button/CustomButton';
 
 
 export default function Navbar() {
@@ -24,16 +25,9 @@ export default function Navbar() {
         <SearchBar></SearchBar>
         </div>
         <div className={styles.buttonBox}>
-            <button className={styles.buttons}>
-                <MdWallet></MdWallet>
-                <p>Login</p>
-            </button>
-            <button className={styles.buttons}>
-                <MdOutlineAccountCircle></MdOutlineAccountCircle>
-            </button>
-            <button className={styles.buttons}>
-                <MdOutlineShoppingCart></MdOutlineShoppingCart>
-            </button>
+                <CustomButton icon={<MdWallet/>} text={'Login'}></CustomButton>
+                <CustomButton icon={<MdOutlineAccountCircle/>}></CustomButton>
+                <CustomButton icon={<MdOutlineShoppingCart/>}></CustomButton>
         </div>
     </nav>
   )
