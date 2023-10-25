@@ -1,0 +1,14 @@
+.filterDataDiv {
+  width: 100%;
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 6px;
+  margin: 10px;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #1212120a;
+}
+.filterDataDiv > button:hover {
+  background-color: black;
+  color: white;
+}

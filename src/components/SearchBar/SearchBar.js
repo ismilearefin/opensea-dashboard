@@ -1,9 +1,8 @@
 'use client'
 
 import styles from './SearchBar.module.css'
-
-
 import { MdSearch } from "react-icons/md";
+
 export default function SearchBar() {
   return (
     <div className={styles.searchBar}>
