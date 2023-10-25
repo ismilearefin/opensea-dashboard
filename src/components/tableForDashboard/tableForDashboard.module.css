@@ -18,8 +18,11 @@
 
 .tablerow{
     border-bottom: 1px solid #1212121f;
+    border-radius: 0.75rem;
 }
-
+.tablerow:hover{
+    background-color: #1212121c;
+}
 .img{
     border-radius: 0.75rem;
 }

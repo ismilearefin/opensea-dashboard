@@ -6,9 +6,11 @@
     gap:0px 4px;
     font-weight: 800;
     padding: 10px;
+    
 }
 .navbarBox {
     display: flex;
+    
 }
 .menu{
     display: flex;
@@ -17,7 +19,6 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
-   
 }
 .verticalLine{
     display: flex;
@@ -28,11 +29,10 @@
 }
 .navbar{
     width: 100%;
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 16px;
+    
 }
 .SearchBarDiv{
     margin-right: 200px;
