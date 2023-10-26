@@ -7,22 +7,15 @@ import {
   MdExpandMore,
 } from "react-icons/md";
 import CustomButton from "@/components/button/CustomButton";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TableForDashboard from "@/components/tableForDashboard/TableForDashboard";
 import EventType from "@/components/eventType/EventType";
 
 export default function Home() {
-  const storedToggle = localStorage.getItem("toggle");
+  const [toggle, setToggle] = useState(false);
   const [filterToggle, setFilterToggle] = useState(false);
   const [CollectionToggle, setCollectionToggle] = useState(false);
   const [ChainToggle, setChainToggle] = useState(false);
-  const [toggle, setToggle] = useState(
-    storedToggle ? JSON.parse(storedToggle) : false
-  );
-
-  useEffect(() => {
-    localStorage.setItem("toggle", JSON.stringify(toggle));
-  }, [toggle]);
 
   return (
     <main className={styles.main}>
