@@ -2,22 +2,24 @@
     width: 100%;
     margin: 10px 0px;
     padding: 6px 25px;
-    border-collapse: collapse;
+    
 }
-.tableBody td,
-.tableBody th {
-  padding: 12px;
-  text-align: center;
-}
+
 
 .itemDiv{
     display: flex;
-    justify-content: center;
+    /* justify-content:flex-end; */
     gap: 10px;
 }
-
-.tablerow td{
+.noMargin{
+    margin-block: unset;
+}
+.tablerow{
+    padding: 1rem;
     border-bottom: 1px solid #1212121f;
+}
+.tablerow > a{
+    cursor: pointer;
 }
 .tablerow:hover{
     background-color: #1212120a;
@@ -25,7 +27,16 @@
 .img{
     border-radius: 0.75rem;
 }
-.tableHead th{
-    padding: 12px;
+.tableHead {
+    padding: 1rem;
     border-bottom: 1px solid #1212121f;
 }
+
+@media screen and (max-width:988px ){
+    .mainTable{
+        width: 100%;
+        margin: 10px 0px;
+        padding: 6px 10px;    
+    }
+   
+  }

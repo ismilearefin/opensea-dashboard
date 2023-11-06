@@ -9,8 +9,8 @@
       "priceInDollar": 2500,
       "rarity": "RARE001",
       "quantity": 1,
-      "from": "Creator Name 1",
-      "to": "Buyer Name 1",
+      "from": "Creator 1",
+      "to": "Buyer 1",
       "time": "12:00:00"
     },
     {
@@ -23,7 +23,7 @@
       "priceInDollar": 1500,
       "rarity": "RARE002",
       "quantity": 5,
-      "from": "Creator Name 2",
+      "from": "Creator 2",
       "to": "",
       "time": "14:30:00"
     },
@@ -37,7 +37,7 @@
       "priceInDollar": 1200,
       "rarity": "RARE003",
       "quantity": 3,
-      "from": "Creator Name 3",
+      "from": "Creator 3",
       "to": "",
       "time": "10:45:00"
     },
@@ -51,8 +51,8 @@
       "priceInDollar": 3500,
       "rarity": "RARE004",
       "quantity": 1,
-      "from": "Creator Name 4",
-      "to": "Buyer Name 2",
+      "from": "Creator 4",
+      "to": "Buyer 2",
       "time": "16:20:00"
     },
     {
@@ -65,7 +65,7 @@
       "priceInDollar": 2000,
       "rarity": "RARE005",
       "quantity": 2,
-      "from": "Creator Name 5",
+      "from": "Creator 5",
       "to": "",
       "time": "11:10:00"
     },
@@ -79,8 +79,8 @@
       "priceInDollar": 3000,
       "rarity": "RARE006",
       "quantity": 1,
-      "from": "Creator Name 6",
-      "to": "Buyer Name 3",
+      "from": "Creator 6",
+      "to": "Buyer 3",
       "time": "13:50:00"
     },
     {
@@ -93,8 +93,8 @@
       "priceInDollar": 4000,
       "rarity": "RARE007",
       "quantity": 1,
-      "from": "Creator Name 7",
-      "to": "Buyer Name 4",
+      "from": "Creator 7",
+      "to": "Buyer 4",
       "time": "15:40:00"
     },
     {
@@ -107,7 +107,7 @@
       "priceInDollar": 1500,
       "rarity": "RARE008",
       "quantity": 4,
-      "from": "Creator Name 8",
+      "from": "Creator 8",
       "to": "",
       "time": "09:30:00"
     },
@@ -121,7 +121,7 @@
       "priceInDollar": 4500,
       "rarity": "RARE009",
       "quantity": 3,
-      "from": "Creator Name 9",
+      "from": "Creator 9",
       "to": "",
       "time": "12:15:00"
     },
@@ -135,8 +135,8 @@
       "priceInDollar": 2500,
       "rarity": "RARE010",
       "quantity": 1,
-      "from": "Creator Name 10",
-      "to": "Buyer Name 5",
+      "from": "Creator 10",
+      "to": "Buyer 5",
       "time": "14:00:00"
     },
     {
@@ -149,7 +149,7 @@
       "priceInDollar": 3000,
       "rarity": "RARE011",
       "quantity": 2,
-      "from": "Creator Name 11",
+      "from": "Creator 11",
       "to": "",
       "time": "11:25:00"
     },
@@ -163,8 +163,8 @@
       "priceInDollar": 4000,
       "rarity": "RARE012",
       "quantity": 1,
-      "from": "Creator Name 12",
-      "to": "Buyer Name 6",
+      "from": "Creator 12",
+      "to": "Buyer 6",
       "time": "16:30:00"
     },
     {
@@ -177,7 +177,7 @@
       "priceInDollar": 3500,
       "rarity": "RARE013",
       "quantity": 3,
-      "from": "Creator Name 13",
+      "from": "Creator 13",
       "to": "",
       "time": "10:50:00"
     },
@@ -191,7 +191,7 @@
       "priceInDollar": 2000,
       "rarity": "RARE014",
       "quantity": 4,
-      "from": "Creator Name 14",
+      "from": "Creator 14",
       "to": "",
       "time": "13:20:00"
     },
@@ -205,8 +205,8 @@
       "priceInDollar": 4500,
       "rarity": "RARE015",
       "quantity": 1,
-      "from": "Creator Name 15",
-      "to": "Buyer Name 7",
+      "from": "Creator 15",
+      "to": "Buyer 7",
       "time": "15:15:00"
     }
   ]

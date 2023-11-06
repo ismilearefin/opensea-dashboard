@@ -1,5 +1,5 @@
 "use client";
-
+import { FiShoppingCart } from "react-icons/fi";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./tableForDashboard.module.css";
@@ -17,50 +17,100 @@ export default function TableForDashboard() {
   }, []);
 
   return (
-    <table className={styles.mainTable}>
-      <thead>
-        <tr className={styles.tableHead}>
-          <th></th>
-          <th>Item</th>
-          <th>Price</th>
-          <th>Rarity</th>
-          <th>Quantity</th>
-          <th>From</th>
-          <th>To</th>
-          <th>Time</th>
-        </tr>
-      </thead>
-      <tbody className={styles.tableBody}>
+    <div className={styles.mainTable}>
+      {/* For Desktop Screen Table [Start] */}
+      <div className="d-none d-lg-block">
+        <div className={`${styles.tableHead} row justify-content-between`}>
+          <p className="col-2"></p>
+          <p className="col-3 text-start">Item</p>
+          <p className="col-2 col-xl-1 text-end">Price</p>
+          <p className="col-1 text-end">Rarity</p>
+          <p className="col-1 text-end">Quantity</p>
+          <p className="d-none d-xl-block col-xl-1 text-end">From</p>
+          <p className="d-none d-xl-block col-xl-1 text-end">To</p>
+          <p className="d-none d-xxl-block col-xxl-1 text-end">Time</p>
+        </div>
+      </div>
+      <div className={`${styles.tableBody} `}>
         {NFTdata.map((item) => (
-          <tr key={item.id} className={styles.tablerow}>
-            <td>{item.status}</td>
-            <td>
-              <div className={styles.itemDiv}>
+          <>
+            {/* /* For Desktop Screen Table [Start] */}
+            <div
+              key={item.id}
+              className={`${styles.tablerow} row align-items-center justify-content-between d-none d-lg-flex`}
+            >
+              <div className="col-2 d-flex align-items-center justify-content-md-evenly">
+                <FiShoppingCart />
+                <p className={styles.noMargin}>{item.status}</p>
+              </div>
+
+              <div className={`${styles.itemDiv} col-3 align-items-center`}>
                 <Image
                   src={item.img}
                   alt="image"
-                  width={50}
-                  height={50}
+                  width={60}
+                  height={60}
                   className={styles.img}
                 ></Image>
                 <div>
-                  <p>{item.name}</p>
-                  <p>{item.code}</p>
+                  <p className={`${styles.noMargin} fw-bold`}>{item.name}</p>
+                  <p className={`${styles.noMargin} fw-light`}>{item.code}</p>
                 </div>
               </div>
-            </td>
-            <td>
-              <h3>{item.priceBitcoin} BIT</h3>
-              <p>${item.priceInDollar}</p>
-            </td>
-            <td>{item.rarity ? item.rarity : <span>--</span>}</td>
-            <td>{item.quantity ? item.quantity : <span>--</span>}</td>
-            <td>{item.from ? item.from : <span>--</span>}</td>
-            <td>{item.to ? item.to : <span>--</span>}</td>
-            <td>{item.time ? item.time : <span>--</span>}</td>
-          </tr>
+
+              <div className="col-2 col-xl-1  text-end">
+                <p className={`${styles.noMargin} fw-bold`}>{item.priceBitcoin} BIT</p>
+                <p className={`${styles.noMargin} fw-light`}>${item.priceInDollar}</p>
+              </div>
+              <p className={`${styles.noMargin} col-1 text-end`}>
+                {item.rarity ? item.rarity : <span>--</span>}
+              </p>
+              <p className={`${styles.noMargin} col-1 text-end`}>
+                {item.quantity ? item.quantity : <span>--</span>}
+              </p>
+              <a className="d-none d-xl-block col-xl-1 text-end text-decoration-none">
+                {item.from ? item.from : <span>--</span>}
+              </a>
+              <a className="d-none d-xl-block col-xl-1 text-end text-decoration-none">
+                {item.to ? item.to : <span>--</span>}
+              </a>
+              <a className="d-none d-xxl-block col-xxl-1 text-end text-decoration-none">
+                {item.time ? item.time : <span>--</span>}
+              </a>
+            </div>
+            {/* For Desktop Screen Table [End]  */}
+
+            {/* For Tab & Mobile Screen Table [Start] */}
+            <div
+              key={item.id}
+              className="d-flex d-lg-none py-3 justify-content-between"
+            >
+              <div className={`${styles.itemDiv}`}>
+                <Image
+                  src={item.img}
+                  alt="image"
+                  width={70}
+                  height={70}
+                  className={styles.img}
+                ></Image>
+                <div>
+                  <p className={`${styles.noMargin} noMargin fw-bold`}>{item.name}</p>
+                  <p className={`${styles.noMargin} noMargin fw-light`}>{item.code}</p>
+                  <button className={`border-0 bg-transparent`}>+ More</button>
+                </div>
+              </div>
+              <div>
+                <p className={`${styles.noMargin} text-end`}>{item.status}</p>
+                <p className={`${styles.noMargin} fw-bold`}>{item.priceBitcoin} BIT</p>
+                <p className={`${styles.noMargin} text-end text-decoration-none`}>
+                  {item.time ? item.time : <span>--</span>}
+                </p>
+              </div>
+            </div>
+            {/* For Tab & Mobile Screen Table [End] */}
+          </>
         ))}
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 }
