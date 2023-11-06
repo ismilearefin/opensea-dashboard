@@ -9,10 +9,11 @@
   border-bottom: 1px solid #1212120a;
   animation: FiltterOptions 1000ms ease 0s 1 normal forwards;
 }
-.filterDataDiv > button:hover {
+.filterDataDiv > button:hover{
   background-color: black;
   color: white;
 }
+
 
 @keyframes FiltterOptions {
   0% {

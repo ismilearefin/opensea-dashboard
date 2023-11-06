@@ -1,0 +1,73 @@
+.collectionDataDiv{
+    width: 100%;
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 6px;
+    margin: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1212120a;
+    animation: FiltterOptions 1000ms ease 0s 1 normal forwards;
+  }
+  .checkMark{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-right: 10px;
+  }
+  
+  .checkbox{
+    border-radius: 10px;
+  }
+  .checkbox:hover{
+    cursor: pointer;
+    background-color: #1212120a;
+  }
+  .noMargin{
+    margin-block: unset;
+}
+
+.checkBoxImg{
+    border-radius: 5px;
+}
+.searchBox{
+    outline-color: transparent;
+    outline: none;
+}
+.SearchInput {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #0000000a;
+    width: 100%;
+    margin-left: 4px;
+  }
+  @keyframes FiltterOptions {
+    0% {
+      opacity: 0;
+      transform: translateY(-25px);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @media screen and (max-width:988px ){
+    .collectionDataDiv{
+        width: 100%;
+        max-height:60vh;
+        overflow-y: scroll;
+        border-radius: 0.75rem;
+        display: flex;
+        gap: 6px;
+        margin: 10px;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        flex-wrap: wrap;
+        border-bottom: 1px solid #1212120a;
+        animation: FiltterOptions 1000ms ease 0s 1 normal forwards;
+      }
+   
+  }

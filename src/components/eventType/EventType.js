@@ -1,9 +1,11 @@
+'use client'
 import { useEffect, useState } from "react";
 import CustomButton from "../button/CustomButton";
 import styles from "./EventType.module.css";
 
 export default function EventType() {
   const [eventFilterData, setEventFilterData] = useState([]);
+
 
   useEffect(() => {
     const getData = async () => {
@@ -18,7 +20,10 @@ export default function EventType() {
     <div className={styles.filterDataDiv}>
       {eventFilterData &&
         eventFilterData.map((data) => (
-          <CustomButton key={data.id} text={data.name}></CustomButton>
+          <CustomButton 
+          key={data.id} 
+          text={data.name}
+          ></CustomButton>
         ))}
     </div>
   );

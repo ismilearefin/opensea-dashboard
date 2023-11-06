@@ -11,6 +11,8 @@ import CustomButton from "@/components/button/CustomButton";
 import { useState } from "react";
 import TableForDashboard from "@/components/tableForDashboard/TableForDashboard";
 import EventType from "@/components/eventType/EventType";
+import Collections from "@/components/Collections/Collections";
+import Chains from "@/components/Chains/Chains";
 
 
 export default function Home() {
@@ -48,7 +50,7 @@ export default function Home() {
                 className={styles.filterButton}
                 onClick={() => setFilterToggle(!filterToggle)}
               >
-                <p>Event Type</p>
+                <p className={styles.noMargin}>Event Type</p>
                 {filterToggle ? (
                   <MdExpandLess className={styles.icons} />
                 ) : (
@@ -63,13 +65,14 @@ export default function Home() {
                 className={styles.filterButton}
                 onClick={() => setCollectionToggle(!CollectionToggle)}
               >
-                <p>Collections</p>
+                <p className={styles.noMargin}>Collections</p>
                 {CollectionToggle ? (
                   <MdExpandLess className={styles.icons} />
                 ) : (
                   <MdExpandMore className={styles.icons} />
                 )}
               </div>
+              {CollectionToggle && <Collections></Collections>}
             </div>
             <div>
               {/* const [ChainToggle, setChainToggle] = useState(false); */}
@@ -77,13 +80,14 @@ export default function Home() {
                 className={styles.filterButton}
                 onClick={() => setChainToggle(!ChainToggle)}
               >
-                <p>Chains</p>
+                <p className={styles.noMargin}>Chains</p>
                 {ChainToggle ? (
                   <MdExpandLess className={styles.icons} />
                 ) : (
                   <MdExpandMore className={styles.icons} />
                 )}
               </div>
+              {ChainToggle && <Chains></Chains>}
             </div>
             <div className={`${styles.darwerButtonDiv} bg-white row px-4 py-3 position-absolute z-10 w-100 bottom-0 d-flex d-lg-none`}>
               <button className={`${styles.darwerButton} col border-0 py-2`}>Clear all</button>

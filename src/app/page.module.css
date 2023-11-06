@@ -1,34 +1,30 @@
-.main{
+.main {
   max-width: 1920px;
   margin: auto;
   padding: 6px 25px;
-  
 }
 
-.buttonDivFilter{
-  
+.buttonDivFilter {
   border-bottom: 2px solid #1212120a;
   margin: 10px;
-  padding-bottom: 10PX;
-  
+  padding-bottom: 10px;
 }
-.tableSection{
-  
+.tableSection {
   display: flex;
 }
 
-.filterOptions{
+.filterOptions {
   width: 375px;
+  max-height: 90vh;
   margin-left: 10px;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  
+  overflow:auto;
 }
 
-.filterButton{
-  padding:18px;
-  /* margin:0px 18px; */
+.filterButton {
+  padding: 18px;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -36,38 +32,36 @@
   border: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 0.75rem;
 }
-.filterButton:hover{
+.filterButton:hover {
   background-color: #1212120a;
   cursor: pointer;
 }
 
-.icons{
+.icons {
   font-size: 24px;
 }
 
-.darwerButtonDiv{
+.darwerButtonDiv {
   border-top: 2px solid #1212120a;
-  gap:10px;
+  gap: 10px;
 }
-.darwerButton{
+.darwerButton {
   background-color: #1212120a;
   border-radius: 10px;
 }
-@media screen and (max-width:988px ){
-  .main{
-    
+@media screen and (max-width: 988px) {
+  .main {
     margin: auto;
     padding: 0px;
-    
   }
-  
-  .filterOptions{
-    position: absolute;
+
+  .filterOptions {
+    position: fixed;
     z-index: 10;
     top: 0px;
-    /* bottom: 0px; */
     width: 100%;
     min-height: 100%;
     background-color: white;
@@ -76,13 +70,11 @@
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-    
     overflow-y: hidden;
-    
     animation: FiltterOptions 1000ms ease 0s 1 normal forwards;
   }
-  .filterButton{
-    padding:18px;
+  .filterButton {
+    padding: 18px;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -93,15 +85,15 @@
     border-radius: 0.75rem;
   }
 }
-
-
-
+.noMargin{
+  margin-block: unset;
+}
 @keyframes FiltterOptions {
   0% {
     opacity: 0;
     transform: translateY(100px);
   }
-  
+
   100% {
     opacity: 1;
     transform: translateY(0);
