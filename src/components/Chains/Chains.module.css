@@ -17,7 +17,7 @@
     cursor: pointer;
     background-color: #1212120a;
   }
-  .noMargin{
+.noMargin{
     margin-block: unset;
 }
 

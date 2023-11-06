@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "./tableForDashboard.module.css";
 
 export default function TableForDashboard() {
+  const [moreInfo, getMoreInfo] = useState(null);
   const [NFTdata, setNFTData] = useState([]);
 
   useEffect(() => {
@@ -59,8 +60,12 @@ export default function TableForDashboard() {
               </div>
 
               <div className="col-2 col-xl-1  text-end">
-                <p className={`${styles.noMargin} fw-bold`}>{item.priceBitcoin} BIT</p>
-                <p className={`${styles.noMargin} fw-light`}>${item.priceInDollar}</p>
+                <p className={`${styles.noMargin} fw-bold`}>
+                  {item.priceBitcoin} BIT
+                </p>
+                <p className={`${styles.noMargin} fw-light`}>
+                  ${item.priceInDollar}
+                </p>
               </div>
               <p className={`${styles.noMargin} col-1 text-end`}>
                 {item.rarity ? item.rarity : <span>--</span>}
@@ -81,31 +86,77 @@ export default function TableForDashboard() {
             {/* For Desktop Screen Table [End]  */}
 
             {/* For Tab & Mobile Screen Table [Start] */}
-            <div
-              key={item.id}
-              className="d-flex d-lg-none py-3 justify-content-between"
-            >
-              <div className={`${styles.itemDiv}`}>
-                <Image
-                  src={item.img}
-                  alt="image"
-                  width={70}
-                  height={70}
-                  className={styles.img}
-                ></Image>
+            <div key={item.id}>
+              <div className="d-flex d-lg-none py-3 justify-content-between">
+                <div className={`${styles.itemDiv}`}>
+                  <Image
+                    src={item.img}
+                    alt="image"
+                    width={70}
+                    height={70}
+                    className={styles.img}
+                  ></Image>
+                  <div>
+                    <p className={`${styles.noMargin} noMargin fw-bold`}>
+                      {item.name}
+                    </p>
+                    <p className={`${styles.noMargin} noMargin fw-light`}>
+                      {item.code}
+                    </p>
+
+                    {moreInfo === item.id ? (
+                      <button
+                        className={`border-0 bg-transparent`}
+                        onClick={() => getMoreInfo(null)}
+                      >
+                        - Less
+                      </button>
+                    ) : (
+                      moreInfo !== item.id && (
+                        <button
+                          className={`border-0 bg-transparent`}
+                          onClick={() => getMoreInfo(item.id)}
+                        >
+                          + More
+                        </button>
+                      )
+                    )}
+                  </div>
+                </div>
                 <div>
-                  <p className={`${styles.noMargin} noMargin fw-bold`}>{item.name}</p>
-                  <p className={`${styles.noMargin} noMargin fw-light`}>{item.code}</p>
-                  <button className={`border-0 bg-transparent`}>+ More</button>
+                  <p className={`${styles.noMargin} text-end`}>{item.status}</p>
+                  <p className={`${styles.noMargin} fw-bold`}>
+                    {item.priceBitcoin} BIT
+                  </p>
+                  <p
+                    className={`${styles.noMargin} text-end text-decoration-none`}
+                  >
+                    {item.time ? item.time : <span>--</span>}
+                  </p>
                 </div>
               </div>
-              <div>
-                <p className={`${styles.noMargin} text-end`}>{item.status}</p>
-                <p className={`${styles.noMargin} fw-bold`}>{item.priceBitcoin} BIT</p>
-                <p className={`${styles.noMargin} text-end text-decoration-none`}>
-                  {item.time ? item.time : <span>--</span>}
-                </p>
-              </div>
+              {moreInfo === item.id && (
+                <table className={`${styles.table} d-lg-none`}>
+                  <thead>
+                    <tr className={styles.mobiletableRowHeading}>
+                      <th>USD Price</th>
+                      <th>Rarity</th>
+                      <th>Quantity</th>
+                      <th>From</th>
+                      <th>To</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className={styles.mobiletableRowBody}>
+                      <th>{item.priceInDollar}</th>
+                      <th>{item.rarity ? item.rarity : <span>--</span>}</th>
+                      <th>{item.quantity ? item.quantity : <span>--</span>}</th>
+                      <th>{item.from ? item.from : <span>--</span>}</th>
+                      <th>{item.to ? item.to : <span>--</span>}</th>
+                    </tr>
+                  </tbody>
+                </table>
+              )}
             </div>
             {/* For Tab & Mobile Screen Table [End] */}
           </>
