@@ -1,5 +1,5 @@
 "use client";
-import { FiShoppingCart } from "react-icons/fi";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import styles from "./tableForDashboard.module.css";
@@ -41,8 +41,10 @@ export default function TableForDashboard() {
               className={`${styles.tablerow} row align-items-center justify-content-between d-none d-lg-flex`}
             >
               <div className="col-2 d-flex align-items-center justify-content-md-evenly">
-                <FiShoppingCart />
-                <p className={styles.noMargin}>{item.status}</p>
+                <div className="col d-flex justify-content-center">
+                <MdOutlineShoppingCart />
+                </div>
+                <p className={`${styles.noMargin} col text-center`}>{item.status}</p>
               </div>
 
               <div className={`${styles.itemDiv} col-3 align-items-center`}>
